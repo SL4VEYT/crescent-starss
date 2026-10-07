@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c6o2knbl6mhh8"]
+
+[ext_resource type="Script" uid="uid://cpvk0lbibyn51" path="res://Vinyl.cs" id="1_8uh7m"]
+[ext_resource type="Texture2D" uid="uid://cy4j2doql0g5x" path="res://vinyl.png" id="1_37kl0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xrivr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xrivr"]
+size = Vector3(16.220184, 1.1704102, 2.2410889)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
+size = Vector3(11.20813, 0.17010498, 2.2478027)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+size = Vector3(2.1931763, 2.203064, 0.015136719)
+
+[node name="Node3D" type="Node3D" unique_id=2011856821]
+
+[node name="plain" type="StaticBody3D" parent="." unique_id=420137988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.064476, 0.39553726, 0.62054443)
+physics_material_override = SubResource("PhysicsMaterial_xrivr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="plain" unique_id=1816239231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4592438, -0.5187988, 0)
+mesh = SubResource("BoxMesh_xrivr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plain" unique_id=165288564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.047180176, -0.020050049, -0.0013427734)
+shape = SubResource("BoxShape3D_13qdw")
+
+[node name="Vinyl" type="CharacterBody3D" parent="." unique_id=244717554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5772653, 5.4694014, 0.6019281)
+script = ExtResource("1_8uh7m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Vinyl" unique_id=292309231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00680542, -3.1939416, -0.0004184246)
+shape = SubResource("BoxShape3D_xrivr")
+
+[node name="Sprite3D" type="Sprite3D" parent="Vinyl" unique_id=1062235909]
+transform = Transform3D(0.16988236, 0, 0, 0, 0.16988236, 0, 0, 0, 1, 0, -3.1989355, 0)
+texture = ExtResource("1_37kl0")
+
+[node name="MainCamera" type="Camera3D" parent="." unique_id=1913516247]
+transform = Transform3D(0.99991435, -0.0006850485, 0.013071501, 0, 0.9986295, 0.052335974, -0.01308944, -0.05233149, 0.998544, -5.532979, 2.3448658, 4.792005)
+fov = 94.51489
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=522635670]
+transform = Transform3D(0.9154467, 3.0253238e-07, 0.4024393, -0.4024393, -1.8074489e-07, 0.9154467, 3.496911e-07, -1, -4.371139e-08, 0, 5.009719, 0)
+light_color = Color(0.84313726, 1, 1, 1)
