@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cm3miyjlm3ejf"]
+
+[ext_resource type="Script" uid="uid://dfgrwbvbjk07h" path="res://code/Monkey.cs" id="1_nnry3"]
+[ext_resource type="PackedScene" uid="uid://dev0o4abb0shf" path="res://3DModels/placeholders/Monkey.blend" id="2_xfvsn"]
+
+[node name="DecorativeMonkey" type="Node3D" unique_id=2017479902]
+script = ExtResource("1_nnry3")
+
+[node name="Monkey" parent="." unique_id=1404118788 instance=ExtResource("2_xfvsn")]
+transform = Transform3D(1.1841233, -0.5765978, 0, 0.5765978, 1.1841233, 0, 0, 0, 1, 0, -3.6597137, 0)

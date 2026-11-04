@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://pfrbovvcmjvm"]
+
+[ext_resource type="Texture2D" uid="uid://bp6mwhp1sjvrk" path="res://images/placeholders/fireball_placeholder.png" id="1_7t63y"]
+[ext_resource type="Script" uid="uid://b7yf6erdw7pwm" path="res://prefabs/Fireball.cs" id="1_sx0kk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xrivr"]
+radius = 0.7101231
+
+[node name="Fireball" type="Area3D" unique_id=1435630415 node_paths=PackedStringArray("sprite")]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_sx0kk")
+sprite = NodePath("Sprite3D")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1985796044]
+transform = Transform3D(-0.16740817, -0.08456395, -8.742278e-08, -0.08456394, 0.16740817, 0, 1.4635286e-08, 7.3928152e-09, -1, 0, 0, 0)
+texture = ExtResource("1_7t63y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1610475545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4953177, 0.098243, 1.1920929e-07)
+shape = SubResource("SphereShape3D_xrivr")
+
+[node name="Timer" type="Timer" parent="." unique_id=1744449088]

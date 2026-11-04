@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://3pfe65373iig"]
+
+[ext_resource type="Texture2D" uid="uid://e345rieixq72" path="res://Interface/HP/tlo.png" id="1_pj4n2"]
+[ext_resource type="Texture2D" uid="uid://ca78ndntcdi6o" path="res://Interface/HP/element1.png" id="2_y522s"]
+[ext_resource type="Texture2D" uid="uid://qndktwtv7ea7" path="res://Interface/HP/element 2.png" id="3_mntvo"]
+[ext_resource type="Texture2D" uid="uid://qgs200wbmyyx" path="res://Interface/HP/element 3.png" id="4_2jhc7"]
+[ext_resource type="Texture2D" uid="uid://niligdij1xc8" path="res://Interface/HP/element 4.png" id="5_6ub1i"]
+[ext_resource type="Texture2D" uid="uid://dfmoly8w1trop" path="res://Interface/HP/element 5.png" id="6_77d4n"]
+[ext_resource type="Texture2D" uid="uid://b2fcpunmpaofw" path="res://Interface/HP/element 6.png" id="7_lucln"]
+[ext_resource type="Texture2D" uid="uid://08rgo88i0g1p" path="res://Interface/HP/element 7.png" id="8_w7y06"]
+[ext_resource type="Texture2D" uid="uid://c7oh5nujnv3fj" path="res://Interface/HP/element 8.png" id="9_x35h6"]
+[ext_resource type="Texture2D" uid="uid://brgyvlt8er5yc" path="res://Interface/HP/element 9.png" id="10_cmv1o"]
+[ext_resource type="Texture2D" uid="uid://ddeseqiytlyfv" path="res://Interface/HP/element 10.png" id="11_gtc3i"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1678502031]
+
+[node name="Healthbar" type="Control" parent="." unique_id=814635768]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 15.0
+offset_right = 574.79504
+offset_bottom = 207.0
+scale = Vector2(0.69325507, 0.69325507)
+
+[node name="TextureRect" type="TextureRect" parent="Healthbar" unique_id=797884086]
+layout_mode = 0
+offset_left = -32.0
+offset_top = -1.0
+offset_right = 542.0
+offset_bottom = 181.0
+texture = ExtResource("1_pj4n2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Healthbar" unique_id=120882466]
+layout_mode = 0
+offset_left = 9.335
+offset_top = 48.710358
+offset_right = 532.335
+offset_bottom = 153.71036
+theme_override_constants/separation = -23
+
+[node name="TextureRect" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=1243725447]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(4.495, -12.42)
+texture = ExtResource("2_y522s")
+
+[node name="TextureRect2" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=19275224]
+layout_mode = 2
+texture = ExtResource("3_mntvo")
+
+[node name="TextureRect3" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=823609653]
+layout_mode = 2
+texture = ExtResource("4_2jhc7")
+
+[node name="TextureRect4" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=778925810]
+layout_mode = 2
+texture = ExtResource("5_6ub1i")
+
+[node name="TextureRect5" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=1245251475]
+layout_mode = 2
+texture = ExtResource("6_77d4n")
+
+[node name="TextureRect6" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=1301878946]
+layout_mode = 2
+texture = ExtResource("7_lucln")
+
+[node name="TextureRect7" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=754111013]
+layout_mode = 2
+texture = ExtResource("8_w7y06")
+
+[node name="TextureRect8" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=737618209]
+layout_mode = 2
+texture = ExtResource("9_x35h6")
+
+[node name="TextureRect9" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=402410055]
+layout_mode = 2
+texture = ExtResource("10_cmv1o")
+
+[node name="TextureRect10" type="TextureRect" parent="Healthbar/HBoxContainer" unique_id=2115706174]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-5.995, 0.18)
+texture = ExtResource("11_gtc3i")

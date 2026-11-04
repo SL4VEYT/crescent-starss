@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://hswpq6sphcbo"]
+
+[ext_resource type="Texture2D" uid="uid://w0kh7stevrbg" path="res://images/placeholders/guy.png" id="1_vg65o"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrivr"]
+
+[node name="John" type="StaticBody3D" unique_id=657924398 groups=["enemy"]]
+collision_layer = 4
+axis_lock_linear_z = true
+axis_lock_angular_z = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1704296984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72004867, 0)
+shape = SubResource("CapsuleShape3D_xrivr")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1162586889]
+transform = Transform3D(0.31555387, 0, 0, 0, 0.31555387, 0, 0, 0, 1, -0.19308645, 0.6422143, 0)
+texture = ExtResource("1_vg65o")

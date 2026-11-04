@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://newsbcsg3wwx"]
+
+[ext_resource type="Script" uid="uid://dvsywkwulh0vp" path="res://code/Explosion.cs" id="1_ah2ku"]
+[ext_resource type="Texture2D" uid="uid://dkin6gx86lad2" path="res://images/placeholders/1634344663466557.png" id="1_psxt3"]
+[ext_resource type="AudioStream" uid="uid://b118532w8nhhc" path="res://sfx/placeholder/deltarune-explosion.mp3" id="3_yp45b"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xrivr"]
+radius = 1.4687908
+
+[node name="explosion" type="Area3D" unique_id=214297914]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_ah2ku")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=443763476]
+shape = SubResource("SphereShape3D_xrivr")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=689930592]
+transform = Transform3D(0.6447028, 0, 0, 0, 0.6447028, 0, 0, 0, 1, 0, 0, 0)
+texture = ExtResource("1_psxt3")
+
+[node name="Timer" type="Timer" parent="." unique_id=681646603]
+wait_time = 1.273
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=843459738]
+stream = ExtResource("3_yp45b")
+volume_db = -20.07
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

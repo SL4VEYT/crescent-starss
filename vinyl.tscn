@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://d0n6natleuyf2"]
+
+[ext_resource type="Script" uid="uid://cpvk0lbibyn51" path="res://code/Vinyl.cs" id="1_igrnc"]
+[ext_resource type="Texture2D" uid="uid://b4eei6e7gyw4k" path="res://images/placeholders/spritesheet.png" id="2_uvp5k"]
+[ext_resource type="Script" uid="uid://xxy2ifegb8l5" path="res://code/Skills.cs" id="3_uvp5k"]
+[ext_resource type="Script" uid="uid://dqsiudcidcgww" path="res://code/HealthManager.cs" id="4_qgxnm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+size = Vector3(0.46003723, 2.0296555, 0.015136719)
+
+[sub_resource type="Animation" id="Animation_6uqi0"]
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ppyta"]
+resource_name = "run_old"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1.035265),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ykrsh"]
+_data = {
+&"RESET": SubResource("Animation_6uqi0"),
+&"run_old": SubResource("Animation_ppyta")
+}
+
+[node name="Vinyl" type="CharacterBody3D" unique_id=1380560499 node_paths=PackedStringArray("sprite", "animPlayer")]
+collision_layer = 2
+collision_mask = 5
+axis_lock_linear_z = true
+axis_lock_angular_z = true
+script = ExtResource("1_igrnc")
+sprite = NodePath("Sprite3D")
+animPlayer = NodePath("AnimationPlayer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1682912673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011238098, -3.2329545, -0.0004184246)
+shape = SubResource("BoxShape3D_xrivr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=997859814]
+libraries/ = SubResource("AnimationLibrary_ykrsh")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1122346366]
+transform = Transform3D(0.16988236, 0, 0, 0, 0.16988236, 0, 0, 0, 1, 0, -3.4962306, 0)
+texture = ExtResource("2_uvp5k")
+hframes = 4
+vframes = 2
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1880620096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23746824, -3.057069, 0)
+
+[node name="AbilityManager" type="Node3D" parent="." unique_id=327328422 node_paths=PackedStringArray("fireballSpawnPoint")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.8, 0)
+script = ExtResource("3_uvp5k")
+fireballSpawnPoint = NodePath("../Marker3D")
+
+[node name="HealthManager" type="Node3D" parent="." unique_id=779535928]
+script = ExtResource("4_qgxnm")
+MaxHP = 100
