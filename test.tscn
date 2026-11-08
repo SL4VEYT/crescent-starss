@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c57p4g50ls6h3" path="res://images/bg/grate2.png" id="7_xersf"]
 [ext_resource type="Texture2D" uid="uid://bmcwr60ga1fwi" path="res://images/bg/grate3.png" id="8_00tp4"]
 [ext_resource type="PackedScene" uid="uid://bvqqfflfyml57" path="res://images/bg/the_cube.blend" id="9_xersf"]
+[ext_resource type="Texture2D" uid="uid://do4geg0ku6iyn" path="res://images/placeholders/rubble.png" id="10_00tp4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xrivr"]
 
@@ -17,6 +18,9 @@ size = Vector3(16.220184, 1.1704102, 2.2410889)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
 size = Vector3(16.187561, 0.17010498, 2.2478027)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+size = Vector3(5.7227783, 3.7387695, 1)
 
 [node name="Node3D" type="Node3D" unique_id=2011856821]
 
@@ -33,10 +37,6 @@ mesh = SubResource("BoxMesh_xrivr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4425354, -0.020050049, -0.0013427734)
 shape = SubResource("BoxShape3D_13qdw")
 
-[node name="MainCamera" type="Camera3D" parent="." unique_id=1913516247]
-transform = Transform3D(0.99991435, -0.0006850485, 0.013071501, 0, 0.9986295, 0.052335974, -0.01308944, -0.05233149, 0.998544, -5.532979, 2.3448658, 4.792005)
-fov = 94.51489
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=522635670]
 transform = Transform3D(0.9154467, 3.0253238e-07, 0.4024393, -0.4024393, -1.8074489e-07, 0.9154467, 3.496911e-07, -1, -4.371139e-08, 0, 5.009719, 0)
 light_color = Color(0.84313726, 1, 1, 1)
@@ -51,29 +51,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6597972, 0.78865343, 0.523
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7716255, 0.78865343, 0.3067711)
 
 [node name="DecorativeMonkey" parent="." unique_id=2017479902 instance=ExtResource("3_6uqi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.212756, 3.1039834, -3.5209308)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.862465, 3.4000998, -3.5209308)
 
 [node name="Vinyl" parent="." unique_id=1380560499 instance=ExtResource("1_8uh7m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.935352, 5.0440173, 0.7012726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8096366, 5.0440173, 0.7012726)
+
+[node name="MainCamera" type="Camera3D" parent="Vinyl" unique_id=1913516247]
+transform = Transform3D(0.99991435, -0.0006850485, 0.013071501, 0, 0.9986295, 0.052335974, -0.01308944, -0.05233149, 0.998544, 1.2766576, -2.6991515, 4.0907326)
+fov = 94.51489
 
 [node name="CanvasLayer" parent="." unique_id=1678502031 instance=ExtResource("4_ppyta")]
 
 [node name="BG" type="Sprite3D" parent="." unique_id=1157609963]
 transform = Transform3D(5.481635, 0, 0, 0, 5.481635, 0, 0, 0, 1.241604, -6.971222, 4.9820585, -6.1273518)
+visible = false
 texture = ExtResource("5_ykrsh")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=442595293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4541087, 4.7493176, -1.7347968)
+visible = false
 texture = ExtResource("6_ehkex")
 metadata/_edit_group_ = true
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1375063755]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5485554, 5.560079, -0.31166935)
+visible = false
 texture = ExtResource("7_xersf")
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=1081391458]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.560079, -0.31166935)
+visible = false
 texture = ExtResource("8_00tp4")
 
 [node name="the_cube" parent="." unique_id=2143298412 instance=ExtResource("9_xersf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.496851, 7.221731, -5.2903194)
+
+[node name="rubble" type="StaticBody3D" parent="." unique_id=1156383102 groups=["destroyable_obj"]]
+transform = Transform3D(0.6440362, 0, 0, 0, 0.6440362, 0, 0, 0, 1, -11.332595, 1.3614434, 0.636616)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rubble" unique_id=1180459638]
+transform = Transform3D(0.9999489, 0, 0, 0, 0.9999489, 0, 0, 0, 0.999971, 0.22590828, -0.107743025, -0.06864309)
+shape = SubResource("BoxShape3D_xrivr")
+
+[node name="Sprite3D" type="Sprite3D" parent="rubble" unique_id=69151332 groups=["destroyable_obj"]]
+texture = ExtResource("10_00tp4")

@@ -27,6 +27,7 @@ project/assembly_name="Crescent Stars"
 [global_group]
 
 enemy="it's for enemies"
+destroyable_obj=""
 
 [input]
 

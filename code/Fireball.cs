@@ -43,7 +43,7 @@ public partial class Fireball : Area3D
 
     private void OnBodyEntered(Node3D body)
     {
-        if (body.IsInGroup("enemy"))
+        if (body.IsInGroup("enemy") || body.IsInGroup("destroyable_obj"))
     {
         body.QueueFree();
     }
