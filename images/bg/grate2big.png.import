@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmtkebprsmreo"
-path.s3tc="res://.godot/imported/grate1.png-9189c189344ded16fd9651797135288c.s3tc.ctex"
+uid="uid://dbbbsteunspbf"
+path.s3tc="res://.godot/imported/grate2big.png-cb5d8efea11d5d372fda0560f17e35d7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/bg/grate1.png"
-dest_files=["res://.godot/imported/grate1.png-9189c189344ded16fd9651797135288c.s3tc.ctex"]
+source_file="res://images/bg/grate2big.png"
+dest_files=["res://.godot/imported/grate2big.png-cb5d8efea11d5d372fda0560f17e35d7.s3tc.ctex"]
 
 [params]
 
