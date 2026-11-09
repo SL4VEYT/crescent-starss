@@ -3,10 +3,12 @@ using System;
 
 public partial class Monkey : Node3D
 {
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	 [ExportGroup("ass")]
+	 [Export] public float X;
+	 [Export] public float Y;
 	public override void _Process(double delta)
 	{
-	RotateObjectLocal(Vector3.Right, Mathf.DegToRad(15.0f) * (float)delta); 
-    RotateObjectLocal(Vector3.Up, Mathf.DegToRad(3.0f) * (float)delta);
+	RotateObjectLocal(Vector3.Right, Mathf.DegToRad(X) * (float)delta); 
+    RotateObjectLocal(Vector3.Up, Mathf.DegToRad(Y) * (float)delta);
 	}
 }

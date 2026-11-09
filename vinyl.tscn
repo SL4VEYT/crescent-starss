@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b4eei6e7gyw4k" path="res://images/placeholders/spritesheet.png" id="2_uvp5k"]
 [ext_resource type="Script" uid="uid://xxy2ifegb8l5" path="res://code/Skills.cs" id="3_uvp5k"]
 [ext_resource type="Script" uid="uid://dqsiudcidcgww" path="res://code/HealthManager.cs" id="4_qgxnm"]
+[ext_resource type="Script" uid="uid://bpit1qnkesg77" path="res://code/CombatManager.cs" id="5_25v17"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
 size = Vector3(0.46003723, 2.0296555, 0.015136719)
@@ -47,6 +48,12 @@ _data = {
 &"run_old": SubResource("Animation_ppyta")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
+size = Vector3(1, 1, 0.37939453)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b1lj4"]
+size = Vector3(1.1499023, 1.5706787, 0.35620117)
+
 [node name="Vinyl" type="CharacterBody3D" unique_id=1380560499 node_paths=PackedStringArray("sprite", "animPlayer")]
 collision_layer = 2
 collision_mask = 5
@@ -78,5 +85,34 @@ script = ExtResource("3_uvp5k")
 fireballSpawnPoint = NodePath("../Marker3D")
 
 [node name="HealthManager" type="Node3D" parent="." unique_id=779535928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.9390833, 0)
 script = ExtResource("4_qgxnm")
 MaxHP = 100
+
+[node name="CombatManager" type="Node3D" parent="." unique_id=1010512506 node_paths=PackedStringArray("light_attack_hitbox", "light_attack", "Uppercut_hitbox", "Uppercut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.278142, -0.1184988)
+script = ExtResource("5_25v17")
+light_attack_hitbox = NodePath("lightpunch")
+light_attack = NodePath("lightpunch/lightpunch")
+Uppercut_hitbox = NodePath("punch_uppercut")
+Uppercut = NodePath("punch_uppercut/Uppercut")
+
+[node name="lightpunch" type="Area3D" parent="CombatManager" unique_id=84569301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64170504, 0.1184988)
+collision_layer = 16
+collision_mask = 4
+
+[node name="lightpunch" type="CollisionShape3D" parent="CombatManager/lightpunch" unique_id=551668491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6045698, -0.61830115, -0.029052734)
+shape = SubResource("BoxShape3D_13qdw")
+disabled = true
+
+[node name="punch_uppercut" type="Area3D" parent="CombatManager" unique_id=1137933628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1921978, 0.1184988)
+collision_layer = 16
+collision_mask = 4
+
+[node name="Uppercut" type="CollisionShape3D" parent="CombatManager/punch_uppercut" unique_id=927565420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67349637, 0.12005901, -0.02746582)
+shape = SubResource("BoxShape3D_b1lj4")
+disabled = true

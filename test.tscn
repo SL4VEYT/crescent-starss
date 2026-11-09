@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cm3miyjlm3ejf" path="res://prefabs/decorative_monkey.tscn" id="3_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://3pfe65373iig" path="res://Interface/UI.tscn" id="4_ppyta"]
 [ext_resource type="Texture2D" uid="uid://cfoibu3boj8h3" path="res://images/bg/bg.png" id="5_ykrsh"]
+[ext_resource type="Script" uid="uid://dfgrwbvbjk07h" path="res://code/Monkey.cs" id="6_77dp3"]
 [ext_resource type="Texture2D" uid="uid://yf6qftsnfh1f" path="res://images/bg/grate1big.png" id="9_00tp4"]
 [ext_resource type="PackedScene" uid="uid://bvqqfflfyml57" path="res://images/bg/the_cube.blend" id="9_xersf"]
 [ext_resource type="Texture2D" uid="uid://do4geg0ku6iyn" path="res://images/placeholders/rubble.png" id="10_00tp4"]
@@ -39,7 +40,7 @@ shape = SubResource("BoxShape3D_13qdw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=522635670]
 transform = Transform3D(0.9154467, 3.0253238e-07, 0.4024393, -0.4024393, -1.8074489e-07, 0.9154467, 3.496911e-07, -1, -4.371139e-08, 0, 5.009719, 0)
-light_color = Color(0.84313726, 1, 1, 1)
+light_color = Color(0.92209506, 0.9732391, 1, 1)
 
 [node name="John" parent="." unique_id=1953416342 instance=ExtResource("2_8uh7m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0978246, 0.7886535, 0.4201672)
@@ -50,20 +51,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6597972, 0.78865343, 0.523
 [node name="John3" parent="." unique_id=1839392236 instance=ExtResource("2_8uh7m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7716255, 0.78865343, 0.3067711)
 
-[node name="DecorativeMonkey" parent="." unique_id=2017479902 instance=ExtResource("3_6uqi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.862465, 3.4000998, -3.5209308)
-
 [node name="Vinyl" parent="." unique_id=1380560499 instance=ExtResource("1_8uh7m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8096366, 5.0440173, 0.7012726)
 
 [node name="MainCamera" type="Camera3D" parent="Vinyl" unique_id=1913516247]
-transform = Transform3D(0.99991435, -0.0006850485, 0.013071501, 0, 0.9986295, 0.052335974, -0.01308944, -0.05233149, 0.998544, 1.2766576, -2.6991515, 4.0907326)
+transform = Transform3D(0.99991435, -0.0006850485, 0.013071501, 0, 0.9986295, 0.052335974, -0.01308944, -0.05233149, 0.998544, 1.2766576, -2.0276408, 4.7645173)
 fov = 94.51489
 
 [node name="CanvasLayer" parent="." unique_id=1678502031 instance=ExtResource("4_ppyta")]
-
-[node name="the_cube" parent="." unique_id=2143298412 instance=ExtResource("9_xersf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.496851, 7.221731, -5.2903194)
 
 [node name="rubble" type="StaticBody3D" parent="." unique_id=1156383102 groups=["destroyable_obj"]]
 transform = Transform3D(0.6440362, 0, 0, 0, 0.6440362, 0, 0, 0, 1, -11.332595, 1.3614434, 0.636616)
@@ -75,46 +70,59 @@ shape = SubResource("BoxShape3D_xrivr")
 [node name="Sprite3D" type="Sprite3D" parent="rubble" unique_id=69151332 groups=["destroyable_obj"]]
 texture = ExtResource("10_00tp4")
 
-[node name="Spritegrateblack" type="Sprite3D" parent="." unique_id=1127929879]
+[node name="all_of_background" type="Node3D" parent="." unique_id=1904487465]
+
+[node name="Spritegrateblack" type="Sprite3D" parent="all_of_background" unique_id=1127929879]
 transform = Transform3D(5.948367, 0, 0, 0, 0.73644483, 4.482342, 0, -5.00806, 0.6591369, -5.295024, -11.883902, -33.15625)
 texture = ExtResource("10_77dp3")
 
-[node name="Spritegrateblue" type="Sprite3D" parent="." unique_id=1627556748]
+[node name="Spritegrateblue" type="Sprite3D" parent="all_of_background" unique_id=1627556748]
 transform = Transform3D(5.948367, 0, 0, 0, 0.73644483, 4.482342, 0, -5.00806, 0.6591369, -5.215, -12.32663, -33.01991)
 texture = ExtResource("11_77dp3")
 
-[node name="Spritegratered" type="Sprite3D" parent="." unique_id=2072621008]
+[node name="Spritegratered" type="Sprite3D" parent="all_of_background" unique_id=2072621008]
 transform = Transform3D(5.948367, 0, 0, 0, 0.73644483, 4.482342, 0, -5.00806, 0.6591369, -4.7042775, -14.510014, -31.8812)
 texture = ExtResource("9_00tp4")
 
-[node name="Spritegrateblack3" type="Sprite3D" parent="." unique_id=902073378]
+[node name="Spritegrateblack3" type="Sprite3D" parent="all_of_background" unique_id=902073378]
 transform = Transform3D(5.948367, 0, 0, 0, 0.73644483, 4.482342, 0, -5.00806, 0.6591369, 222.666, -11.883902, -33.15625)
 texture = ExtResource("10_77dp3")
 
-[node name="Spritegrateblue3" type="Sprite3D" parent="." unique_id=2145440766]
+[node name="Spritegrateblue3" type="Sprite3D" parent="all_of_background" unique_id=2145440766]
 transform = Transform3D(5.948367, 0, 0, 0, 0.73644483, 4.482342, 0, -5.00806, 0.6591369, 222.666, -12.32663, -33.01991)
 texture = ExtResource("11_77dp3")
 
-[node name="Spritegratered3" type="Sprite3D" parent="." unique_id=339223163]
+[node name="Spritegratered3" type="Sprite3D" parent="all_of_background" unique_id=339223163]
 transform = Transform3D(5.948367, 0, 0, 0, 0.73644483, 4.482342, 0, -5.00806, 0.6591369, 222.666, -14.510014, -31.8812)
 texture = ExtResource("9_00tp4")
 
-[node name="Spritegrateblack2" type="Sprite3D" parent="." unique_id=901447626]
+[node name="Spritegrateblack2" type="Sprite3D" parent="all_of_background" unique_id=901447626]
 transform = Transform3D(-5.9483085, 0.010482446, 0.01793871, -0.025801267, -1.1998925, -4.40138, -0.006383974, -4.9176393, 1.0739646, -4.842838, 34.722755, -33.07247)
 flip_v = true
 texture = ExtResource("10_77dp3")
 
-[node name="Spritegrateblue2" type="Sprite3D" parent="." unique_id=999715135]
+[node name="Spritegrateblue2" type="Sprite3D" parent="all_of_background" unique_id=999715135]
 transform = Transform3D(-5.9483085, 0.010482446, 0.01793871, -0.025801267, -1.1998925, -4.40138, -0.006383974, -4.9176393, 1.0739646, -5.675, 35.43275, -33.02695)
 flip_v = true
 texture = ExtResource("11_77dp3")
 
-[node name="Spritegratered2" type="Sprite3D" parent="." unique_id=873367305]
+[node name="Spritegratered2" type="Sprite3D" parent="all_of_background" unique_id=873367305]
 transform = Transform3D(-5.9483085, 0.010482446, 0.01793871, -0.025801267, -1.1998925, -4.40138, -0.006383974, -4.9176393, 1.0739646, -5.446535, 37.45367, -32.048325)
 flip_v = true
 texture = ExtResource("9_00tp4")
 
-[node name="BG" type="Sprite3D" parent="." unique_id=1157609963]
+[node name="BG" type="Sprite3D" parent="all_of_background" unique_id=1157609963]
 transform = Transform3D(96.05872, 0, 0, 0, 45.270622, 0, 0, 0, 2.1615803, -6.971222, 4.9820585, -115.61266)
 visible = false
 texture = ExtResource("5_ykrsh")
+
+[node name="DecorativeMonkey" parent="all_of_background" unique_id=2017479902 instance=ExtResource("3_6uqi0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.862465, 3.4000998, -3.5209308)
+X = 15.0
+Y = 5.0
+
+[node name="the_cube" parent="all_of_background" unique_id=2143298412 instance=ExtResource("9_xersf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.496851, 7.221731, -5.2903194)
+script = ExtResource("6_77dp3")
+X = -10.0
+Y = -2.0
