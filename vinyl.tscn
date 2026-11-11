@@ -56,12 +56,12 @@ size = Vector3(1.1499023, 1.5706787, 0.35620117)
 
 [node name="Vinyl" type="CharacterBody3D" unique_id=1380560499 node_paths=PackedStringArray("sprite", "animPlayer")]
 collision_layer = 2
-collision_mask = 5
 axis_lock_linear_z = true
 axis_lock_angular_z = true
 script = ExtResource("1_igrnc")
 sprite = NodePath("Sprite3D")
 animPlayer = NodePath("AnimationPlayer")
+JumpVelocity = 6.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1682912673]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011238098, -3.2329545, -0.0004184246)

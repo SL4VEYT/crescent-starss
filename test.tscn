@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://d0n6natleuyf2" path="res://vinyl.tscn" id="1_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://hswpq6sphcbo" path="res://prefabs/test_enemy.tscn" id="2_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://cm3miyjlm3ejf" path="res://prefabs/decorative_monkey.tscn" id="3_6uqi0"]
+[ext_resource type="PackedScene" uid="uid://dv8mv5ncr0s40" path="res://prefabs/rubble.tscn" id="4_77dp3"]
 [ext_resource type="PackedScene" uid="uid://3pfe65373iig" path="res://Interface/UI.tscn" id="4_ppyta"]
 [ext_resource type="Texture2D" uid="uid://cfoibu3boj8h3" path="res://images/bg/bg.png" id="5_ykrsh"]
 [ext_resource type="Script" uid="uid://dfgrwbvbjk07h" path="res://code/Monkey.cs" id="6_77dp3"]
 [ext_resource type="Texture2D" uid="uid://yf6qftsnfh1f" path="res://images/bg/grate1big.png" id="9_00tp4"]
 [ext_resource type="PackedScene" uid="uid://bvqqfflfyml57" path="res://images/bg/the_cube.blend" id="9_xersf"]
-[ext_resource type="Texture2D" uid="uid://do4geg0ku6iyn" path="res://images/placeholders/rubble.png" id="10_00tp4"]
 [ext_resource type="Texture2D" uid="uid://kvhqa6qmy846" path="res://images/bg/grate3big.png" id="10_77dp3"]
 [ext_resource type="Texture2D" uid="uid://dbbbsteunspbf" path="res://images/bg/grate2big.png" id="11_77dp3"]
 
@@ -19,9 +19,6 @@ size = Vector3(16.220184, 1.1704102, 2.2410889)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
 size = Vector3(16.187561, 0.17010498, 2.2478027)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
-size = Vector3(5.7227783, 3.7387695, 1)
 
 [node name="Node3D" type="Node3D" unique_id=2011856821]
 
@@ -60,15 +57,8 @@ fov = 94.51489
 
 [node name="CanvasLayer" parent="." unique_id=1678502031 instance=ExtResource("4_ppyta")]
 
-[node name="rubble" type="StaticBody3D" parent="." unique_id=1156383102 groups=["destroyable_obj"]]
+[node name="rubble" parent="." unique_id=2065170195 instance=ExtResource("4_77dp3")]
 transform = Transform3D(0.6440362, 0, 0, 0, 0.6440362, 0, 0, 0, 1, -11.332595, 1.3614434, 0.636616)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="rubble" unique_id=1180459638]
-transform = Transform3D(0.9999489, 0, 0, 0, 0.9999489, 0, 0, 0, 0.999971, 0.22590828, -0.107743025, -0.06864309)
-shape = SubResource("BoxShape3D_xrivr")
-
-[node name="Sprite3D" type="Sprite3D" parent="rubble" unique_id=69151332 groups=["destroyable_obj"]]
-texture = ExtResource("10_00tp4")
 
 [node name="all_of_background" type="Node3D" parent="." unique_id=1904487465]
 
@@ -118,11 +108,7 @@ texture = ExtResource("5_ykrsh")
 
 [node name="DecorativeMonkey" parent="all_of_background" unique_id=2017479902 instance=ExtResource("3_6uqi0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.862465, 3.4000998, -3.5209308)
-X = 15.0
-Y = 5.0
 
 [node name="the_cube" parent="all_of_background" unique_id=2143298412 instance=ExtResource("9_xersf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.496851, 7.221731, -5.2903194)
 script = ExtResource("6_77dp3")
-X = -10.0
-Y = -2.0

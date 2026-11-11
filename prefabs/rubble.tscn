@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dv8mv5ncr0s40"]
+
+[ext_resource type="Texture2D" uid="uid://do4geg0ku6iyn" path="res://images/placeholders/rubble.png" id="1_uwciv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+size = Vector3(5.7227783, 3.7387695, 1)
+
+[node name="rubble" type="StaticBody3D" unique_id=2065170195 groups=["destroyable_obj"]]
+transform = Transform3D(0.6440362, 0, 0, 0, 0.6440362, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=859592883]
+transform = Transform3D(0.9999489, 0, 0, 0, 0.9999489, 0, 0, 0, 0.999971, 0.22590828, -0.107743025, -0.06864309)
+shape = SubResource("BoxShape3D_xrivr")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1539296840 groups=["destroyable_obj"]]
+texture = ExtResource("1_uwciv")
