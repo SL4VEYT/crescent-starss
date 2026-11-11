@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d0n6natleuyf2" path="res://vinyl.tscn" id="1_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://hswpq6sphcbo" path="res://prefabs/test_enemy.tscn" id="2_8uh7m"]
+[ext_resource type="Script" uid="uid://dv32pt87gwy2" path="res://main_camera.gd" id="3_5tkv4"]
 [ext_resource type="PackedScene" uid="uid://cm3miyjlm3ejf" path="res://prefabs/decorative_monkey.tscn" id="3_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://dv8mv5ncr0s40" path="res://prefabs/rubble.tscn" id="4_77dp3"]
 [ext_resource type="PackedScene" uid="uid://3pfe65373iig" path="res://Interface/UI.tscn" id="4_ppyta"]
@@ -54,6 +55,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8096366, 5.0440173, 0.7012
 [node name="MainCamera" type="Camera3D" parent="Vinyl" unique_id=1913516247]
 transform = Transform3D(0.99991435, -0.0006850485, 0.013071501, 0, 0.9986295, 0.052335974, -0.01308944, -0.05233149, 0.998544, 1.2766576, -2.0276408, 4.7645173)
 fov = 94.51489
+script = ExtResource("3_5tkv4")
 
 [node name="CanvasLayer" parent="." unique_id=1678502031 instance=ExtResource("4_ppyta")]
 
