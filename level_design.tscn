@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c2ycoa8rbalhh"]
+
+[ext_resource type="PackedScene" uid="uid://d0n6natleuyf2" path="res://vinyl.tscn" id="1_q3rnq"]
+
+[node name="LevelDesign" type="Node3D" unique_id=2066610534]
+
+[node name="Vinyl" parent="." unique_id=1380560499 instance=ExtResource("1_q3rnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.34446, -1)

@@ -14,10 +14,14 @@ public partial class Vinyl : CharacterBody3D
     [Export] public float CoyoteTime = 0.15f;    
     [Export] public float JumpBufferTime = 0.15f;
   
-
+    private CombatManager combatManager;
     private float coyoteTimer = 0.0f;
     private float jumpBufferTimer = 0.0f;
    
+        public override void _Ready()
+    {
+        combatManager = GetNode<CombatManager>("CombatManager");
+    }
 	    public override void _PhysicsProcess(double delta)  //here it starts
 	{
 		Vector3 velocity = Velocity;
@@ -82,9 +86,16 @@ public partial class Vinyl : CharacterBody3D
     {
             sprite.FlipH = false; // Face right
     }
+    
 
 MoveAndSlide();
 }
-
+public override void _UnhandledInput(InputEvent @event)
+    {
+        if (@event.IsActionPressed("Attack")) 
+        {
+            combatManager.ExecuteAttack(); //calls a function from CombatManaager
+        }
+    }
     
 }
