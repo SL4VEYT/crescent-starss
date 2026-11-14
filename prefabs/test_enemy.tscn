@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hswpq6sphcbo"]
 
 [ext_resource type="Script" uid="uid://boua1rrciayxj" path="res://code/Enemy.cs" id="1_8vpbc"]
-[ext_resource type="Texture2D" uid="uid://6vkb0rvjehel" path="res://images/placeholders/maddumb.png" id="2_8vpbc"]
+[ext_resource type="Texture2D" uid="uid://mfyyeb3epfp3" path="res://images/enemies/cardboard.png" id="2_8vpbc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrivr"]
 
@@ -15,5 +15,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72004867, 0)
 shape = SubResource("CapsuleShape3D_xrivr")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1882392099]
-transform = Transform3D(0.117975354, 0, 0, 0, 0.122760326, 0, 0, 0, 1, -0.09416276, 0.3094697, 0)
+transform = Transform3D(0.16595502, 0, 0, 0, 0.172686, 0, 0, 0, 1, 0.039975792, 0.55896413, 0)
 texture = ExtResource("2_8vpbc")

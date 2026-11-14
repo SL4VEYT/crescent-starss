@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bgsunijhpo88x"]
+
+[ext_resource type="Script" uid="uid://cyk3d6o81rtdb" path="res://code/Leparticle.cs" id="1_3fifi"]
+[ext_resource type="Texture2D" uid="uid://sjieicbhlpo7" path="res://particles/cardboard/part1.png" id="1_o0ul3"]
+[ext_resource type="Texture2D" uid="uid://c20lgrn32g50b" path="res://particles/cardboard/part2.png" id="2_3fifi"]
+[ext_resource type="Texture2D" uid="uid://ca42g0p65w0pi" path="res://particles/cardboard/part3.png" id="3_krreb"]
+[ext_resource type="Texture2D" uid="uid://b4cmg1hm1pl40" path="res://particles/cardboard/part4.png" id="4_g1ijn"]
+[ext_resource type="Texture2D" uid="uid://d3geu0dx6sm7j" path="res://particles/cardboard/part5.png" id="5_detjp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+size = Vector3(0.12890625, 0.09310913, 0.038208008)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
+size = Vector3(0.07330322, 0.051513672, 0.06100464)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b1lj4"]
+size = Vector3(0.027709961, 0.08605957, 0.04345703)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_njqwk"]
+size = Vector3(0.05810547, 0.04840088, 0.04763794)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wi6ju"]
+size = Vector3(0.118774414, 0.07141113, 0.04663086)
+
+[node name="Node3D" type="Node3D" unique_id=682903280]
+transform = Transform3D(1.7810514, 0, 0, 0, 1.7810514, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_3fifi")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1415260444]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1157785423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0009765625, 0.06373596, 0.008728027)
+shape = SubResource("BoxShape3D_xrivr")
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D" unique_id=166174973]
+transform = Transform3D(0.05284722, 0, 0, 0, 0.05284722, 0, 0, 0, 1, 0, 0, 0)
+texture = ExtResource("1_o0ul3")
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=1725717670]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2" unique_id=971185929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003326416, 0.27355957, -0.0056915283)
+shape = SubResource("BoxShape3D_13qdw")
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D2" unique_id=674960092]
+transform = Transform3D(0.06525181, 0, 0, 0, 0.06525181, 0, 0, 0, 1, 0.0072846487, 0.042335764, 0)
+texture = ExtResource("2_3fifi")
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="." unique_id=22385547]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D3" unique_id=1414762045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049362466, -0.110927336, 0.0026855469)
+shape = SubResource("BoxShape3D_b1lj4")
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D3" unique_id=1668889193]
+transform = Transform3D(0.10647659, 0, 0, 0, 0.08984132, 0, 0, 0, 1, 0.120214164, 0.13194397, 0)
+texture = ExtResource("3_krreb")
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="." unique_id=39526154]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D4" unique_id=280167769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057373047, -0.076243766, 0.0053253174)
+shape = SubResource("BoxShape3D_njqwk")
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D4" unique_id=1816408397]
+transform = Transform3D(0.060986586, 0, 0, 0, 0.060986586, 0, 0, 0, 1, 0.0023471396, 0.065377325, 0)
+flip_h = true
+texture = ExtResource("4_g1ijn")
+
+[node name="RigidBody3D5" type="RigidBody3D" parent="." unique_id=1243945114]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5" unique_id=70640725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08380127, -0.29901123, 0.0052490234)
+shape = SubResource("BoxShape3D_wi6ju")
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D5" unique_id=1777948726]
+transform = Transform3D(0.088204026, 0, 0, 0, 0.088204026, 0, 0, 0, 0.8656422, 0.06265178, 0.10430278, 0)
+texture = ExtResource("5_detjp")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://6j6xq8x3q8qp"]
+
+[ext_resource type="Texture2D" uid="uid://bnuwg2ad6ask1" path="res://images/enemies/glitch.png" id="1_d254i"]
+[ext_resource type="Script" uid="uid://yc623ye1si2o" path="res://code/Glitchenemy.cs" id="1_hod6c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+size = Vector3(1.543335, 1, 1)
+
+[node name="glitchenemy" type="CharacterBody3D" unique_id=346575943]
+script = ExtResource("1_hod6c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=42454357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0530396, 0, 0)
+shape = SubResource("BoxShape3D_xrivr")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1624687798]
+transform = Transform3D(0.1406548, 0, 0, 0, 0.1406548, 0, 0, 0, 1, -0.95244765, 0.2006352, 0)
+texture = ExtResource("1_d254i")

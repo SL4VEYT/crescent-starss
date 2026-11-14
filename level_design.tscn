@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://b8mej5mwn5cvc" path="res://code/MainCamera.cs" id="2_jdwfr"]
 [ext_resource type="PackedScene" uid="uid://dv8mv5ncr0s40" path="res://prefabs/rubble.tscn" id="3_aw5bv"]
 [ext_resource type="PackedScene" uid="uid://3pfe65373iig" path="res://Interface/UI.tscn" id="4_g4uva"]
+[ext_resource type="PackedScene" uid="uid://6j6xq8x3q8qp" path="res://glitchenemy.tscn" id="6_5tisb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyd11"]
 emission_enabled = true
@@ -30,12 +31,12 @@ size = Vector3(2.293518, 1.265686, 1)
 size = Vector3(32.728085, 1.1311035, 2.2410889)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aw5bv"]
-size = Vector3(34.52723, 0.17010498, 2.2478027)
+size = Vector3(35.55939, 0.17010498, 2.2478027)
 
 [sub_resource type="BoxMesh" id="BoxMesh_iyd11"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cnbba"]
-size = Vector3(1.8838196, 4.310791, 3.7944336)
+size = Vector3(2.2675934, 4.310791, 3.7944336)
 
 [node name="LevelDesign" type="Node3D" unique_id=2066610534]
 
@@ -77,29 +78,11 @@ transform = Transform3D(1.0644656, 0, 0, 0, 1.0644656, 0, 0, 0, 1, 50.84217, -5.
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1594677566]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.581665, 0, 0)
 
-[node name="glitch1" type="Area3D" parent="." unique_id=137839392]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.57067, -12.090385, -0.8333435)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="glitch1" unique_id=196910783]
-material_overlay = SubResource("StandardMaterial3D_aw5bv")
-cast_shadow = 0
-mesh = SubResource("SphereMesh_fmxcx")
-
 [node name="glitch2" type="Area3D" parent="." unique_id=370542539]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.031, -21.371428, -0.8333435)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="glitch2" unique_id=1913853832]
-material_overlay = SubResource("StandardMaterial3D_aw5bv")
-cast_shadow = 0
-mesh = SubResource("SphereMesh_fmxcx")
-
 [node name="glitch3" type="Area3D" parent="." unique_id=1464592590]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.875954, -31.158087, -0.8333435)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="glitch3" unique_id=1216497837]
-material_overlay = SubResource("StandardMaterial3D_aw5bv")
-cast_shadow = 0
-mesh = SubResource("SphereMesh_fmxcx")
 
 [node name="rubble2" parent="." unique_id=730346428 instance=ExtResource("3_aw5bv")]
 transform = Transform3D(1.0644656, 0, 0, 0, 1.0644656, 0, 0, 0, 1, 12.581791, -63.213287, -0.858968)
@@ -160,7 +143,7 @@ transform = Transform3D(1, 0, 0, 0, 6.55644, 0, 0, 0, 1, 0.5537734, -3.6575346, 
 mesh = SubResource("BoxMesh_cnbba")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="platformy/platforma0" unique_id=1513986264]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3866409, -0.020050049, -1.5562744)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.87056017, -0.020050049, -1.5562744)
 shape = SubResource("BoxShape3D_aw5bv")
 
 [node name="platforma" type="StaticBody3D" parent="platformy" unique_id=1971304478]
@@ -193,7 +176,7 @@ transform = Transform3D(1.871882, 0, 0, 0, 1.871882, 0, 0, 0, 1.9488809, 0.65214
 mesh = SubResource("BoxMesh_iyd11")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="platformy/kostka2" unique_id=1025593370]
-transform = Transform3D(1, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0.6521492, -0.3653565, -0.89264905)
+transform = Transform3D(1, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0.4602623, -0.3653565, -0.89264905)
 shape = SubResource("BoxShape3D_cnbba")
 
 [node name="kostka3" type="StaticBody3D" parent="platformy" unique_id=652590096]
@@ -477,3 +460,12 @@ shape = SubResource("BoxShape3D_iyd11")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="platformy/platforma13" unique_id=530207448]
 transform = Transform3D(4.6191206, 0, 0, 0, 1, 0, 0, 0, 2.2329118, 7.079754, 4.3819, -0.9213784)
 mesh = SubResource("BoxMesh_fmxcx")
+
+[node name="glitchenemy" parent="." unique_id=346575943 instance=ExtResource("6_5tisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.315914, -12.024051, -1.43611)
+
+[node name="glitchenemy2" parent="." unique_id=1604829890 instance=ExtResource("6_5tisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.431404, -21.564674, -1.43611)
+
+[node name="glitchenemy3" parent="." unique_id=1615903296 instance=ExtResource("6_5tisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.556953, -31.053637, -1.4361091)
