@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://hswpq6sphcbo"]
 
-[ext_resource type="Script" uid="uid://boua1rrciayxj" path="res://code/Enemy.cs" id="1_8vpbc"]
+[ext_resource type="Script" uid="uid://boua1rrciayxj" path="res://code/enemies/Enemy.cs" id="1_8vpbc"]
 [ext_resource type="Texture2D" uid="uid://mfyyeb3epfp3" path="res://images/enemies/cardboard.png" id="2_8vpbc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrivr"]

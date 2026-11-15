@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgsunijhpo88x"]
 
-[ext_resource type="Script" uid="uid://cyk3d6o81rtdb" path="res://code/Leparticle.cs" id="1_3fifi"]
+[ext_resource type="Script" uid="uid://cyk3d6o81rtdb" path="res://code/enemies/Leparticle.cs" id="1_3fifi"]
 [ext_resource type="Texture2D" uid="uid://sjieicbhlpo7" path="res://particles/cardboard/part1.png" id="1_o0ul3"]
 [ext_resource type="Texture2D" uid="uid://c20lgrn32g50b" path="res://particles/cardboard/part2.png" id="2_3fifi"]
 [ext_resource type="Texture2D" uid="uid://ca42g0p65w0pi" path="res://particles/cardboard/part3.png" id="3_krreb"]

@@ -28,6 +28,7 @@ project/assembly_name="Crescent Stars"
 
 enemy="it's for enemies"
 destroyable_obj=""
+player=""
 
 [input]
 

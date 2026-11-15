@@ -54,7 +54,7 @@ size = Vector3(1, 1, 0.37939453)
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1lj4"]
 size = Vector3(1.1499023, 1.5706787, 0.35620117)
 
-[node name="Vinyl" type="CharacterBody3D" unique_id=1380560499 node_paths=PackedStringArray("sprite", "animPlayer")]
+[node name="Vinyl" type="CharacterBody3D" unique_id=1380560499 node_paths=PackedStringArray("sprite", "animPlayer") groups=["player"]]
 collision_layer = 2
 axis_lock_linear_z = true
 axis_lock_angular_z = true

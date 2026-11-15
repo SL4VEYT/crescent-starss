@@ -469,3 +469,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.431404, -21.564674, -1.436
 
 [node name="glitchenemy3" parent="." unique_id=1615903296 instance=ExtResource("6_5tisb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.556953, -31.053637, -1.4361091)
+
+[node name="glitchenemy4" parent="." unique_id=856338708 instance=ExtResource("6_5tisb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.702524, 2.5104213, -1.0701051)
