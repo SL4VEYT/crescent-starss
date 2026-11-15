@@ -5,6 +5,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrivr"]
 
 [node name="Vinyl_FP_Horror" type="CharacterBody3D" unique_id=516966861]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_6f7oo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1505421778]
