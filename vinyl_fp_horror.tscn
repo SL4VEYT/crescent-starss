@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bfg30e418sgjs"]
 
 [ext_resource type="Script" uid="uid://bpb707l546tlq" path="res://code/VinylFpHorror.cs" id="1_6f7oo"]
+[ext_resource type="Script" uid="uid://e3rx2r48tcpe" path="res://code/Camera3dhorror.cs" id="2_yhwrs"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrivr"]
 
 [node name="Vinyl_FP_Horror" type="CharacterBody3D" unique_id=516966861]
+transform = Transform3D(2.15, 0, 0, 0, 2.15, 0, 0, 0, 2.15, 0, 0, 0)
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_6f7oo")
@@ -13,4 +15,6 @@ script = ExtResource("1_6f7oo")
 shape = SubResource("CapsuleShape3D_xrivr")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1424332756]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5442609, 0)
+transform = Transform3D(0.46511623, 0, 0, 0, 0.46511623, 0, 0, 0, 0.46511623, 0, 0.54426086, -0.25710052)
+script = ExtResource("2_yhwrs")
+MouseSensitivity = 0.007

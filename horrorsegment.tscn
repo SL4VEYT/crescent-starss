@@ -17,7 +17,8 @@ size = Vector3(1, 11.513123, 11.604675)
 [node name="Node3D" type="Node3D" unique_id=1669360068]
 
 [node name="Vinyl_FP_Horror" parent="." unique_id=516966861 instance=ExtResource("1_t0mh1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.412, 9.56892, 84.08924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.412, 10.519531, 84.08924)
+SprintMultiplier = 10.09
 
 [node name="podloga" type="StaticBody3D" parent="." unique_id=1021732872]
 transform = Transform3D(1.5001476, 0, 0, 0, 0.09297842, 0, 0, 0, 4.4241323, 30.381126, 1.0610267, -0.5295973)
@@ -32,8 +33,9 @@ mesh = SubResource("BoxMesh_gnanb")
 transform = Transform3D(1.0000029, 0, 0, 0, 1, 0, 0, 0, 1, 0.36455154, -0.020048141, -1.4454039)
 shape = SubResource("BoxShape3D_th1eo")
 
-[node name="Sciana" type="Area3D" parent="." unique_id=694394953]
+[node name="Sciana" type="StaticBody3D" parent="." unique_id=1083925011]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.69204, 0, 74.48215)
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana" unique_id=444338721]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.337389, 2.3038483)
@@ -43,7 +45,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana2" type="Area3D" parent="." unique_id=1537700511]
+[node name="Sciana2" type="StaticBody3D" parent="." unique_id=315960152]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.622318, 0, 74.48215)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana2" unique_id=1366395300]
@@ -54,7 +56,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana3" type="Area3D" parent="." unique_id=969463371]
+[node name="Sciana3" type="StaticBody3D" parent="." unique_id=168361727]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 28.340828, 0, 70.98699)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana3" unique_id=1346161085]
@@ -65,7 +67,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana4" type="Area3D" parent="." unique_id=1035994040]
+[node name="Sciana4" type="StaticBody3D" parent="." unique_id=558928271]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 50.004383, 0, 70.98699)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana4" unique_id=923256486]
@@ -76,7 +78,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana6" type="Area3D" parent="." unique_id=371931631]
+[node name="Sciana6" type="StaticBody3D" parent="." unique_id=1953115417]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.66719, 0, 86.00362)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana6" unique_id=1914063028]
@@ -87,7 +89,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana7" type="Area3D" parent="." unique_id=1465211955]
+[node name="Sciana7" type="StaticBody3D" parent="." unique_id=1600692769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.563652, 0, 85.88903)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana7" unique_id=979289148]
@@ -98,7 +100,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana5" type="Area3D" parent="." unique_id=1242684289]
+[node name="Sciana5" type="StaticBody3D" parent="." unique_id=1828520108]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 32.623768, 0, 92.79684)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana5" unique_id=171231431]
@@ -109,7 +111,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana8" type="Area3D" parent="." unique_id=1627020164]
+[node name="Sciana8" type="StaticBody3D" parent="." unique_id=1466207511]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 44.135353, 0, 92.79684)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana8" unique_id=1720733383]
@@ -120,7 +122,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana9" type="Area3D" parent="." unique_id=417223277]
+[node name="Sciana9" type="StaticBody3D" parent="." unique_id=1197842673]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.814468, 0, 63.012062)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana9" unique_id=1503579752]
@@ -131,7 +133,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana10" type="Area3D" parent="." unique_id=349856930]
+[node name="Sciana10" type="StaticBody3D" parent="." unique_id=2137781834]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.017494, 0, 63.012062)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana10" unique_id=1227662022]
@@ -142,7 +144,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana11" type="Area3D" parent="." unique_id=1087954797]
+[node name="Sciana11" type="StaticBody3D" parent="." unique_id=1397230708]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 45.290306, 0, 59.566578)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana11" unique_id=1054722470]
@@ -153,7 +155,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana12" type="Area3D" parent="." unique_id=822874577]
+[node name="Sciana12" type="StaticBody3D" parent="." unique_id=398166319]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.814468, 0, 51.505817)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana12" unique_id=1908132689]
@@ -164,7 +166,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana13" type="Area3D" parent="." unique_id=992873636]
+[node name="Sciana13" type="StaticBody3D" parent="." unique_id=127251462]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 35.273674, 0, 48.100796)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana13" unique_id=373620751]
@@ -175,7 +177,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana14" type="Area3D" parent="." unique_id=643747882]
+[node name="Sciana14" type="StaticBody3D" parent="." unique_id=1658291039]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 46.721832, 0, 48.100796)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana14" unique_id=1821037974]
@@ -186,7 +188,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana15" type="Area3D" parent="." unique_id=872322171]
+[node name="Sciana15" type="StaticBody3D" parent="." unique_id=1384107290]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.715816, 0, 59.566578)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana15" unique_id=1350452792]
@@ -197,7 +199,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana16" type="Area3D" parent="." unique_id=160175028]
+[node name="Sciana16" type="StaticBody3D" parent="." unique_id=1122062070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.52958, 0, 51.505817)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana16" unique_id=832120151]
@@ -208,7 +210,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana17" type="Area3D" parent="." unique_id=763900306]
+[node name="Sciana17" type="StaticBody3D" parent="." unique_id=1366602746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.52958, 0, 40.02208)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana17" unique_id=1603251584]
@@ -219,7 +221,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana18" type="Area3D" parent="." unique_id=1453940080]
+[node name="Sciana18" type="StaticBody3D" parent="." unique_id=1993025185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.814468, 0, 39.980717)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana18" unique_id=294718832]
@@ -230,7 +232,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana19" type="Area3D" parent="." unique_id=1444719699]
+[node name="Sciana19" type="StaticBody3D" parent="." unique_id=534744128]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.715816, 0, 36.582493)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana19" unique_id=191888964]
@@ -241,7 +243,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana20" type="Area3D" parent="." unique_id=2020231366]
+[node name="Sciana20" type="StaticBody3D" parent="." unique_id=1537251656]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 45.309963, 0, 36.582493)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana20" unique_id=1944346363]
@@ -252,7 +254,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana21" type="Area3D" parent="." unique_id=2089353703]
+[node name="Sciana21" type="StaticBody3D" parent="." unique_id=1688602325]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.814468, 0, 28.48093)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana21" unique_id=1761489644]
@@ -263,7 +265,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana22" type="Area3D" parent="." unique_id=71909684]
+[node name="Sciana22" type="StaticBody3D" parent="." unique_id=1717139883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.881405, 0, 28.48093)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana22" unique_id=235257886]
@@ -274,7 +276,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana23" type="Area3D" parent="." unique_id=944701372]
+[node name="Sciana23" type="StaticBody3D" parent="." unique_id=483486219]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.881405, 0, 16.98145)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana23" unique_id=1067548610]
@@ -285,7 +287,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana24" type="Area3D" parent="." unique_id=1977934355]
+[node name="Sciana24" type="StaticBody3D" parent="." unique_id=1086662569]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.814468, 0, 16.973076)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana24" unique_id=1439269473]
@@ -296,7 +298,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana25" type="Area3D" parent="." unique_id=1323585669]
+[node name="Sciana25" type="StaticBody3D" parent="." unique_id=1829268611]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 45.309963, 0, 13.613512)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana25" unique_id=1919815790]
@@ -307,7 +309,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana26" type="Area3D" parent="." unique_id=1525118171]
+[node name="Sciana26" type="StaticBody3D" parent="." unique_id=704919329]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.789116, 0, 13.613512)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana26" unique_id=1564730782]
@@ -318,7 +320,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana27" type="Area3D" parent="." unique_id=56424573]
+[node name="Sciana27" type="StaticBody3D" parent="." unique_id=687954264]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 68.29872, 0, 13.613512)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana27" unique_id=474481481]
@@ -329,7 +331,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana28" type="Area3D" parent="." unique_id=732124642]
+[node name="Sciana28" type="StaticBody3D" parent="." unique_id=569728065]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 79.77787, 0, 13.613512)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana28" unique_id=855901545]
@@ -340,7 +342,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana29" type="Area3D" parent="." unique_id=573650413]
+[node name="Sciana29" type="StaticBody3D" parent="." unique_id=1163248891]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.792625, 0, 5.5849447)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana29" unique_id=1502656316]
@@ -351,7 +353,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana30" type="Area3D" parent="." unique_id=1146165962]
+[node name="Sciana30" type="StaticBody3D" parent="." unique_id=1813514424]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.792625, 0, -5.9238734)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana30" unique_id=1008221616]
@@ -362,7 +364,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana31" type="Area3D" parent="." unique_id=1896694261]
+[node name="Sciana31" type="StaticBody3D" parent="." unique_id=269749332]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.854332, 0, 5.5849447)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana31" unique_id=1001088402]
@@ -373,7 +375,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana32" type="Area3D" parent="." unique_id=1629165307]
+[node name="Sciana32" type="StaticBody3D" parent="." unique_id=1804140908]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.854332, 0, -5.9238734)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana32" unique_id=933765856]
