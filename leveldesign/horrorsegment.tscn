@@ -385,3 +385,10 @@ shape = SubResource("BoxShape3D_fmxcx")
 [node name="Sprite3D" type="Sprite3D" parent="Sciana32" unique_id=1537794924]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
 texture = ExtResource("2_gnanb")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2120908903]
+transform = Transform3D(1, 0, 0, 0, -0.0005803545, 0.9999998, 0, -0.9999998, -0.0005803545, 37.275425, 8.98612, 62.64953)
+light_color = Color(0.9477572, 0.9416947, 0, 1)
+light_energy = 11.297
+spot_range = 11.080226
+spot_angle = 23.242039

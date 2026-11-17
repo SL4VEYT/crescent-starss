@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://b8mej5mwn5cvc" path="res://code/MainCamera.cs" id="2_jdwfr"]
 [ext_resource type="PackedScene" uid="uid://dv8mv5ncr0s40" path="res://prefabs/rubble.tscn" id="3_aw5bv"]
 [ext_resource type="PackedScene" uid="uid://3pfe65373iig" path="res://Interface/UI.tscn" id="4_g4uva"]
+[ext_resource type="Script" uid="uid://bukni8bovncgt" path="res://code/enemies/Anomally_get_to_horror.cs" id="5_8225s"]
 [ext_resource type="PackedScene" uid="uid://6j6xq8x3q8qp" path="res://glitchenemy.tscn" id="6_5tisb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyd11"]
@@ -18,6 +19,9 @@ emission_on_uv2 = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw5bv"]
 emission_enabled = true
 emission = Color(0.78039217, 0, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+size = Vector3(1, 1, 8.232666)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyd11"]
 size = Vector3(10.67417, 0.82702637, 2.279358)
@@ -33,15 +37,21 @@ size = Vector3(32.728085, 1.1311035, 2.2410889)
 [sub_resource type="BoxShape3D" id="BoxShape3D_aw5bv"]
 size = Vector3(35.55939, 0.17010498, 2.2478027)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_n870m"]
+size = Vector3(32.666412, 0.17010498, 2.2478027)
+
 [sub_resource type="BoxMesh" id="BoxMesh_iyd11"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cnbba"]
 size = Vector3(2.2675934, 4.310791, 3.7944336)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8225s"]
+size = Vector3(23.3005, 0.82702637, 2.279358)
+
 [node name="LevelDesign" type="Node3D" unique_id=2066610534]
 
 [node name="Vinyl" parent="." unique_id=1380560499 instance=ExtResource("1_q3rnq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.34446, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.31339, -51.17468, -1)
 
 [node name="Camera3D" type="Camera3D" parent="Vinyl" unique_id=835157800]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10462284, -2.729248, 9.563812)
@@ -98,12 +108,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.51181, -58.23894, -0.912
 
 [node name="anomally" type="Area3D" parent="." unique_id=1002973145]
 transform = Transform3D(7.295763, 0, 0, 0, 19.244967, 0, 0, 0, 0.27829182, -161.83179, -63.166824, -0.8333435)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("5_8225s")
+TargetScenePath = "uid://g31dkicbt1t1"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="anomally" unique_id=1625034830]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.11974192, 0)
 material_overlay = SubResource("StandardMaterial3D_aw5bv")
 cast_shadow = 0
 mesh = SubResource("SphereMesh_fmxcx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="anomally" unique_id=1365115180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, -0.3275149)
+shape = SubResource("BoxShape3D_xrivr")
 
 [node name="CanvasLayer" parent="." unique_id=1678502031 instance=ExtResource("4_g4uva")]
 
@@ -143,8 +161,8 @@ transform = Transform3D(1, 0, 0, 0, 6.55644, 0, 0, 0, 1, 0.5537734, -3.6575346, 
 mesh = SubResource("BoxMesh_cnbba")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="platformy/platforma0" unique_id=1513986264]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.87056017, -0.020050049, -1.5562744)
-shape = SubResource("BoxShape3D_aw5bv")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5759289, -0.020050049, -1.5562744)
+shape = SubResource("BoxShape3D_n870m")
 
 [node name="platforma" type="StaticBody3D" parent="platformy" unique_id=1971304478]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43471622, 0, 0)
@@ -432,8 +450,8 @@ shape = SubResource("BoxShape3D_aw5bv")
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -154.3649, -63.85255, 5.9604645e-08)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="platformy/platforma19" unique_id=1074109696]
-transform = Transform3D(0.448, 0, 0, 0, 0.448, 0, 0, 0, 1, 7.1015625, 4.814888, -0.9066384)
-shape = SubResource("BoxShape3D_iyd11")
+transform = Transform3D(0.44800287, 0, 0, 0, 0.44800287, 0, 0, 0, 1, 7.101288, 4.814888, -0.9066386)
+shape = SubResource("BoxShape3D_8225s")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="platformy/platforma19" unique_id=275333889]
 transform = Transform3D(4.6191206, 0, 0, 0, 1, 0, 0, 0, 2.2329118, 7.1265917, 4.3819, -0.9213784)
