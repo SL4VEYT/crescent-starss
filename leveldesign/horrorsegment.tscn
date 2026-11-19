@@ -3,6 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://bfg30e418sgjs" path="res://vinyl_fp_horror.tscn" id="1_t0mh1"]
 [ext_resource type="Texture2D" uid="uid://d08trimqublnr" path="res://images/placeholders/placeholder ściany.png" id="2_gnanb"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mhcf7"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_rkdiv"]
+sky_material = SubResource("ProceduralSkyMaterial_mhcf7")
+
+[sub_resource type="Environment" id="Environment_h2sbk"]
+background_mode = 1
+sky = SubResource("Sky_rkdiv")
+glow_enabled = true
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t0mh1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gnanb"]
@@ -15,6 +27,9 @@ size = Vector3(124.37998, 0.17010498, 45.04779)
 size = Vector3(1, 11.513123, 11.604675)
 
 [node name="Node3D" type="Node3D" unique_id=1669360068]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=956411499]
+environment = SubResource("Environment_h2sbk")
 
 [node name="Vinyl_FP_Horror" parent="." unique_id=516966861 instance=ExtResource("1_t0mh1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.412, 10.519531, 84.08924)
@@ -43,6 +58,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana" unique_id=1856601851]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana2" type="StaticBody3D" parent="." unique_id=315960152]
@@ -54,6 +70,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana2" unique_id=1974101067]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana3" type="StaticBody3D" parent="." unique_id=168361727]
@@ -65,6 +82,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana3" unique_id=1428612020]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana4" type="StaticBody3D" parent="." unique_id=558928271]
@@ -76,6 +94,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana4" unique_id=560964761]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana6" type="StaticBody3D" parent="." unique_id=1953115417]
@@ -87,6 +106,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana6" unique_id=654191977]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana7" type="StaticBody3D" parent="." unique_id=1600692769]
@@ -98,6 +118,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana7" unique_id=435433269]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana5" type="StaticBody3D" parent="." unique_id=1828520108]
@@ -109,6 +130,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana5" unique_id=770154669]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana8" type="StaticBody3D" parent="." unique_id=1466207511]
@@ -120,6 +142,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana8" unique_id=544310342]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana9" type="StaticBody3D" parent="." unique_id=1197842673]
@@ -131,6 +154,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana9" unique_id=1372998774]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana10" type="StaticBody3D" parent="." unique_id=2137781834]
@@ -142,6 +166,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana10" unique_id=1170463962]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana11" type="StaticBody3D" parent="." unique_id=1397230708]
@@ -153,6 +178,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana11" unique_id=2077858829]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana12" type="StaticBody3D" parent="." unique_id=398166319]
@@ -164,6 +190,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana12" unique_id=626018824]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana13" type="StaticBody3D" parent="." unique_id=127251462]
@@ -175,6 +202,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana13" unique_id=510912216]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana14" type="StaticBody3D" parent="." unique_id=1658291039]
@@ -186,6 +214,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana14" unique_id=2040604580]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana15" type="StaticBody3D" parent="." unique_id=1384107290]
@@ -197,6 +226,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana15" unique_id=1812012583]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana16" type="StaticBody3D" parent="." unique_id=1122062070]
@@ -208,6 +238,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana16" unique_id=1580057675]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana17" type="StaticBody3D" parent="." unique_id=1366602746]
@@ -219,6 +250,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana17" unique_id=663955658]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana18" type="StaticBody3D" parent="." unique_id=1993025185]
@@ -230,6 +262,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana18" unique_id=605634055]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana19" type="StaticBody3D" parent="." unique_id=534744128]
@@ -241,6 +274,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana19" unique_id=413101316]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana20" type="StaticBody3D" parent="." unique_id=1537251656]
@@ -252,6 +286,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana20" unique_id=2085938559]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana21" type="StaticBody3D" parent="." unique_id=1688602325]
@@ -263,6 +298,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana21" unique_id=624164121]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana22" type="StaticBody3D" parent="." unique_id=1717139883]
@@ -274,6 +310,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana22" unique_id=563970303]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana23" type="StaticBody3D" parent="." unique_id=483486219]
@@ -285,6 +322,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana23" unique_id=1519562128]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana24" type="StaticBody3D" parent="." unique_id=1086662569]
@@ -296,6 +334,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana24" unique_id=278468325]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana25" type="StaticBody3D" parent="." unique_id=1829268611]
@@ -307,6 +346,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana25" unique_id=1123890866]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana26" type="StaticBody3D" parent="." unique_id=704919329]
@@ -318,6 +358,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana26" unique_id=943089647]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana27" type="StaticBody3D" parent="." unique_id=687954264]
@@ -329,6 +370,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana27" unique_id=34415731]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana28" type="StaticBody3D" parent="." unique_id=569728065]
@@ -340,6 +382,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana28" unique_id=1703797628]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana29" type="StaticBody3D" parent="." unique_id=1163248891]
@@ -351,6 +394,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana29" unique_id=1789289943]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana30" type="StaticBody3D" parent="." unique_id=1813514424]
@@ -362,6 +406,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana30" unique_id=60006151]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana31" type="StaticBody3D" parent="." unique_id=269749332]
@@ -373,6 +418,7 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana31" unique_id=280517589]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
 [node name="Sciana32" type="StaticBody3D" parent="." unique_id=1804140908]
@@ -384,11 +430,10 @@ shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana32" unique_id=1537794924]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+shaded = true
 texture = ExtResource("2_gnanb")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2120908903]
-transform = Transform3D(1, 0, 0, 0, -0.0005803545, 0.9999998, 0, -0.9999998, -0.0005803545, 37.275425, 8.98612, 62.64953)
-light_color = Color(0.9477572, 0.9416947, 0, 1)
-light_energy = 11.297
-spot_range = 11.080226
-spot_angle = 23.242039
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1097329764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.003075, 5.699582, 81.15874)
+shadow_enabled = true
+omni_range = 22.560263

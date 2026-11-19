@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bpb707l546tlq" path="res://code/VinylFpHorror.cs" id="1_6f7oo"]
 [ext_resource type="Script" uid="uid://e3rx2r48tcpe" path="res://code/Camera3dhorror.cs" id="2_yhwrs"]
+[ext_resource type="Script" uid="uid://dbt3tisxx7waw" path="res://code/Latarka.cs" id="3_812jb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrivr"]
 
@@ -18,3 +19,11 @@ shape = SubResource("CapsuleShape3D_xrivr")
 transform = Transform3D(0.46511623, 0, 0, 0, 0.46511623, 0, 0, 0, 0.46511623, 0, 0.54426086, -0.25710052)
 script = ExtResource("2_yhwrs")
 MouseSensitivity = 0.007
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=376250786]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2023902, 0)
+visible = false
+light_energy = 5.009
+spot_range = 17.094633
+spot_angle = 47.164413
+script = ExtResource("3_812jb")
