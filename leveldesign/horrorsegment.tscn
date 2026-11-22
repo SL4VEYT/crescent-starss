@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bfg30e418sgjs" path="res://vinyl_fp_horror.tscn" id="1_t0mh1"]
 [ext_resource type="Texture2D" uid="uid://d08trimqublnr" path="res://images/placeholders/placeholder ściany.png" id="2_gnanb"]
+[ext_resource type="PackedScene" uid="uid://b1xp5gpjd05ij" path="res://prefabs/wall_final.tscn" id="3_rkdiv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mhcf7"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -100,17 +101,8 @@ transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08,
 shaded = true
 texture = ExtResource("2_gnanb")
 
-[node name="Sciana6" type="StaticBody3D" parent="." unique_id=1953115417]
+[node name="wall_final" parent="." unique_id=2056511199 instance=ExtResource("3_rkdiv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.66719, 0, 86.00362)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana6" unique_id=1914063028]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.337389, 2.3038483)
-shape = SubResource("BoxShape3D_fmxcx")
-
-[node name="Sprite3D" type="Sprite3D" parent="Sciana6" unique_id=654191977]
-transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
-shaded = true
-texture = ExtResource("2_gnanb")
 
 [node name="Sciana7" type="StaticBody3D" parent="." unique_id=1600692769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.563652, 0, 85.88903)
@@ -132,7 +124,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.337389, 2.3038483)
 shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana5" unique_id=770154669]
-transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 1.1574631, 6.3922453, 2.2941895)
 shaded = true
 texture = ExtResource("2_gnanb")
 
@@ -144,7 +136,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.337389, 2.3038483)
 shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana8" unique_id=544310342]
-transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
+transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 1.1574631, 6.3922453, 2.2941895)
 shaded = true
 texture = ExtResource("2_gnanb")
 

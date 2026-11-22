@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b1xp5gpjd05ij"]
+
+[ext_resource type="Texture2D" uid="uid://cko3fl065tvnv" path="res://images/sciana_horror.png" id="1_va53u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fmxcx"]
+size = Vector3(1, 11.513123, 11.604675)
+
+[node name="wall_final" type="StaticBody3D" unique_id=2056511199]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2045637381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.337389, 2.3038483)
+shape = SubResource("BoxShape3D_fmxcx")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=584656607]
+transform = Transform3D(-1.196046e-07, 0, -0.9999998, 0, 2.7362342, 0, 2.7362342, 0, -4.371138e-08, 0, 6.3922453, 2.2941895)
+shaded = true
+texture = ExtResource("1_va53u")

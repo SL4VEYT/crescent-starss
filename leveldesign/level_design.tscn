@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dv8mv5ncr0s40" path="res://prefabs/rubble.tscn" id="3_aw5bv"]
 [ext_resource type="PackedScene" uid="uid://3pfe65373iig" path="res://Interface/UI.tscn" id="4_g4uva"]
 [ext_resource type="Script" uid="uid://bukni8bovncgt" path="res://code/enemies/Anomally_get_to_horror.cs" id="5_8225s"]
+[ext_resource type="Script" uid="uid://hbwb6trjf8vi" path="res://code/enemies/Thethingspawningtheannomaly.cs" id="5_n870m"]
 [ext_resource type="PackedScene" uid="uid://6j6xq8x3q8qp" path="res://glitchenemy.tscn" id="6_5tisb"]
+[ext_resource type="Texture2D" uid="uid://bnuwg2ad6ask1" path="res://images/enemies/glitch.png" id="6_n870m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyd11"]
 emission_enabled = true
@@ -16,12 +18,11 @@ emission_on_uv2 = true
 
 [sub_resource type="SphereMesh" id="SphereMesh_fmxcx"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw5bv"]
-emission_enabled = true
-emission = Color(0.78039217, 0, 1, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
+size = Vector3(9.541748, 20.107483, 3.0229492)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
-size = Vector3(1, 1, 8.232666)
+[sub_resource type="BoxShape3D" id="BoxShape3D_b1lj4"]
+size = Vector3(4.9767, 8.8498535, 2.925293)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyd11"]
 size = Vector3(10.67417, 0.82702637, 2.279358)
@@ -51,7 +52,7 @@ size = Vector3(23.3005, 0.82702637, 2.279358)
 [node name="LevelDesign" type="Node3D" unique_id=2066610534]
 
 [node name="Vinyl" parent="." unique_id=1380560499 instance=ExtResource("1_q3rnq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.31339, -51.17468, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -154.2703, -55.365803, -1)
 
 [node name="Camera3D" type="Camera3D" parent="Vinyl" unique_id=835157800]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10462284, -2.729248, 9.563812)
@@ -106,22 +107,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -134.01437, -54.10435, -0.912
 [node name="Dummy4" parent="." unique_id=11104873 instance=ExtResource("2_cnbba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.51181, -58.23894, -0.9124756)
 
-[node name="anomally" type="Area3D" parent="." unique_id=1002973145]
-transform = Transform3D(7.295763, 0, 0, 0, 19.244967, 0, 0, 0, 0.27829182, -161.83179, -63.166824, -0.8333435)
+[node name="Thethingspawningtheannomaly" type="Area3D" parent="." unique_id=1389973993 node_paths=PackedStringArray("thething", "a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -167.82626, -57.64571, 0)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5_n870m")
+thething = NodePath("../Anomalia")
+a = NodePath("../Anomalia")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Thethingspawningtheannomaly" unique_id=1341463127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43762207, 1.9092102, -1.0114746)
+shape = SubResource("BoxShape3D_13qdw")
+
+[node name="Anomalia" type="Area3D" parent="." unique_id=1526119205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -159.31725, -59.471725, 0)
+visible = false
 collision_layer = 4
 collision_mask = 2
+monitoring = false
 script = ExtResource("5_8225s")
 TargetScenePath = "uid://g31dkicbt1t1"
+Accel = 5.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="anomally" unique_id=1625034830]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.11974192, 0)
-material_overlay = SubResource("StandardMaterial3D_aw5bv")
-cast_shadow = 0
-mesh = SubResource("SphereMesh_fmxcx")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Anomalia" unique_id=1053964827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30143738, -1.0735512, -0.9626465)
+shape = SubResource("BoxShape3D_b1lj4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="anomally" unique_id=1365115180]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, -0.3275149)
-shape = SubResource("BoxShape3D_xrivr")
+[node name="Sprite3D" type="Sprite3D" parent="Anomalia" unique_id=185053590]
+transform = Transform3D(0.6590142, 0, 0, 0, 0.6590142, 0, 0, 0, 1, 0.7027283, 0.6621895, 0)
+texture = ExtResource("6_n870m")
 
 [node name="CanvasLayer" parent="." unique_id=1678502031 instance=ExtResource("4_g4uva")]
 
