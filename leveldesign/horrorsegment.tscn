@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bfg30e418sgjs" path="res://vinyl_fp_horror.tscn" id="1_t0mh1"]
 [ext_resource type="Texture2D" uid="uid://d08trimqublnr" path="res://images/placeholders/placeholder ściany.png" id="2_gnanb"]
+[ext_resource type="Texture2D" uid="uid://bqqt4fhypn0cv" path="res://images/floor.png" id="3_h2sbk"]
 [ext_resource type="PackedScene" uid="uid://b1xp5gpjd05ij" path="res://prefabs/wall_final.tscn" id="3_rkdiv"]
+[ext_resource type="Texture2D" uid="uid://cko3fl065tvnv" path="res://images/sciana_horror.png" id="5_rcakk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mhcf7"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -13,13 +15,31 @@ sky_material = SubResource("ProceduralSkyMaterial_mhcf7")
 
 [sub_resource type="Environment" id="Environment_h2sbk"]
 background_mode = 1
+background_color = Color(0.7121294, 0.7121294, 0.71212935, 1)
 sky = SubResource("Sky_rkdiv")
 glow_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65oui"]
+albedo_texture = ExtResource("5_rcakk")
+
+[sub_resource type="QuadMesh" id="QuadMesh_njqwk"]
+material = SubResource("StandardMaterial3D_65oui")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wi6ju"]
+size = Vector3(0.23242188, 11.135376, 11.565796)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t0mh1"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_gnanb"]
-size = Vector3(32.728085, 1.1311035, 2.2410889)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2sbk"]
+albedo_texture = ExtResource("3_h2sbk")
+uv1_scale = Vector3(23.665, 23.665, 23.665)
+
+[sub_resource type="QuadMesh" id="QuadMesh_13qdw"]
+lightmap_size_hint = Vector2i(155, 11)
+material = SubResource("StandardMaterial3D_h2sbk")
+uv2_padding = 0.0
+size = Vector2(31.08, 2.255)
+orientation = 1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_th1eo"]
 size = Vector3(124.37998, 0.17010498, 45.04779)
@@ -39,31 +59,57 @@ environment = SubResource("Environment_h2sbk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.412, 10.519531, 84.08924)
 SprintMultiplier = 10.09
 
+[node name="wallonmesh3" type="StaticBody3D" parent="." unique_id=1628764387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.6883, 6.9835978, 88.381905)
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wallonmesh3" unique_id=1452095960]
+transform = Transform3D(-5.029822e-07, 0, -0.9999995, 0, 11.506891, 0, 11.506891, 0, -4.3711367e-08, -0.056793213, -0.3960209, -0.067359924)
+mesh = SubResource("QuadMesh_njqwk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallonmesh3" unique_id=1294742528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -0.44903564, -0.07940674)
+shape = SubResource("BoxShape3D_wi6ju")
+
+[node name="wallonmesh" type="StaticBody3D" parent="." unique_id=1058939474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.71295, 6.9990387, 76.82503)
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wallonmesh" unique_id=1905041170]
+transform = Transform3D(-5.029822e-07, 0, -0.9999995, 0, 11.506891, 0, 11.506891, 0, -4.3711367e-08, -0.09716797, -0.3960209, 0)
+mesh = SubResource("QuadMesh_njqwk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallonmesh" unique_id=1825597391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -0.44903564, -0.07940674)
+shape = SubResource("BoxShape3D_wi6ju")
+
+[node name="wallonmesh2" type="StaticBody3D" parent="." unique_id=933122494]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 41.848663, 6.8741693, 93.869896)
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wallonmesh2" unique_id=1428342342]
+transform = Transform3D(-5.029822e-07, 0, -0.9999995, 0, 11.506891, 0, 11.506891, 0, -4.3711367e-08, -0.09716797, -0.3960209, 0)
+mesh = SubResource("QuadMesh_njqwk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallonmesh2" unique_id=2140935325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -0.44903564, -0.07940674)
+shape = SubResource("BoxShape3D_wi6ju")
+
+[node name="wall_final2" parent="." unique_id=553375987 instance=ExtResource("3_rkdiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.176605, 0, 74.467)
+
 [node name="podloga" type="StaticBody3D" parent="." unique_id=1021732872]
 transform = Transform3D(1.5001476, 0, 0, 0, 0.09297842, 0, 0, 0, 4.4241323, 30.381126, 1.0610267, -0.5295973)
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_t0mh1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="podloga" unique_id=461075182]
-transform = Transform3D(3.8215, 0, 0, 0, 6.55644, 0, 0, 0, 20.281929, 0.5537739, -3.6575346, -1.5415039)
-mesh = SubResource("BoxMesh_gnanb")
+transform = Transform3D(3.821501, 0, 0, 0, 6.55644, 0, 0, 0, 20.281929, 0.5537739, -2.2059517, -1.5415039)
+mesh = SubResource("QuadMesh_13qdw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="podloga" unique_id=1817530353]
 transform = Transform3D(1.0000029, 0, 0, 0, 1, 0, 0, 0, 1, 0.36455154, -0.020048141, -1.4454039)
 shape = SubResource("BoxShape3D_th1eo")
-
-[node name="Sciana" type="StaticBody3D" parent="." unique_id=1083925011]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.69204, 0, 74.48215)
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana" unique_id=444338721]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.337389, 2.3038483)
-shape = SubResource("BoxShape3D_fmxcx")
-
-[node name="Sprite3D" type="Sprite3D" parent="Sciana" unique_id=1856601851]
-transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 0, 6.3922453, 2.2941895)
-shaded = true
-texture = ExtResource("2_gnanb")
 
 [node name="Sciana2" type="StaticBody3D" parent="." unique_id=315960152]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.622318, 0, 74.48215)
@@ -101,9 +147,6 @@ transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08,
 shaded = true
 texture = ExtResource("2_gnanb")
 
-[node name="wall_final" parent="." unique_id=2056511199 instance=ExtResource("3_rkdiv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.66719, 0, 86.00362)
-
 [node name="Sciana7" type="StaticBody3D" parent="." unique_id=1600692769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.563652, 0, 85.88903)
 
@@ -124,18 +167,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.337389, 2.3038483)
 shape = SubResource("BoxShape3D_fmxcx")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sciana5" unique_id=770154669]
-transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 1.1574631, 6.3922453, 2.2941895)
-shaded = true
-texture = ExtResource("2_gnanb")
-
-[node name="Sciana8" type="StaticBody3D" parent="." unique_id=1466207511]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 44.135353, 0, 92.79684)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sciana8" unique_id=1720733383]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.337389, 2.3038483)
-shape = SubResource("BoxShape3D_fmxcx")
-
-[node name="Sprite3D" type="Sprite3D" parent="Sciana8" unique_id=544310342]
 transform = Transform3D(-2.6226834e-08, 0, -1, 0, 0.6, 0, 0.6, 0, -4.371139e-08, 1.1574631, 6.3922453, 2.2941895)
 shaded = true
 texture = ExtResource("2_gnanb")
