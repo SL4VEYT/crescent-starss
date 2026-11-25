@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://b3j378xd61j6q"]
+
+[ext_resource type="Texture2D" uid="uid://bi8cmmsllb7b" path="res://Interface/main_menu/start.png" id="1_nlkkf"]
+[ext_resource type="Script" uid="uid://bvhe7wh4c2xa5" path="res://code/Start_Button.cs" id="2_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://cnrv53mybdt81" path="res://Interface/main_menu/cs1.png" id="2_qe12f"]
+[ext_resource type="Texture2D" uid="uid://bcwku0emabthe" path="res://Interface/main_menu/cs2.png" id="3_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://bqlak25eqj2e4" path="res://Interface/main_menu/exit.png" id="3_dy7ct"]
+[ext_resource type="Script" uid="uid://q8ulqrnvhrgc" path="res://code/Exit.cs" id="4_0o4t1"]
+[ext_resource type="Texture2D" uid="uid://vb43u24vjdww" path="res://Interface/main_menu/cs3.png" id="4_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://ctyh4vfhojbew" path="res://Interface/main_menu/cs4.png" id="5_0o4t1"]
+[ext_resource type="Script" uid="uid://bkhvo6c80a2kx" path="res://code/Menu.cs" id="6_0k4wn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("2_qe12f")
+}, {
+"duration": 1.5,
+"texture": ExtResource("3_8qtwp")
+}, {
+"duration": 1.5,
+"texture": ExtResource("4_dy7ct")
+}, {
+"duration": 1.5,
+"texture": ExtResource("5_0o4t1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="MainMenu" type="Control" unique_id=87233999]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1155.0
+offset_bottom = 653.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1222669613]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.840002, 16.2)
+
+[node name="start" type="Button" parent="." unique_id=1567405662]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 263.0
+offset_right = 1664.0
+offset_bottom = 728.0
+scale = Vector2(0.3200003, 0.3200003)
+icon = ExtResource("1_nlkkf")
+script = ExtResource("2_8qtwp")
+Scene = "res://leveldesign/level_design.tscn"
+
+[node name="exit" type="Button" parent="." unique_id=962020487]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 459.00003
+offset_right = 1664.0
+offset_bottom = 924.0
+scale = Vector2(0.3200003, 0.3200003)
+icon = ExtResource("3_dy7ct")
+script = ExtResource("4_0o4t1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=263762593]
+position = Vector2(567, 139)
+scale = Vector2(0.52, 0.52)
+sprite_frames = SubResource("SpriteFrames_xrivr")
+autoplay = "default"
+frame_progress = 0.22313465
+speed_scale = 0.1
+script = ExtResource("6_0k4wn")
+Amplitude = 11.0
+Speed = 1.24
