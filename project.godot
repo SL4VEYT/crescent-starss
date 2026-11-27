@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Crescent Stars"
-run/main_scene="uid://g31dkicbt1t1"
+run/main_scene="uid://b3j378xd61j6q"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://otherstuff/icon.svg"
 

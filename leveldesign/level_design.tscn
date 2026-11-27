@@ -52,7 +52,7 @@ size = Vector3(23.3005, 0.82702637, 2.279358)
 [node name="LevelDesign" type="Node3D" unique_id=2066610534]
 
 [node name="Vinyl" parent="." unique_id=1380560499 instance=ExtResource("1_q3rnq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.56422, -51.27018, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.636547, 8.604098, -1)
 
 [node name="Camera3D" type="Camera3D" parent="Vinyl" unique_id=835157800]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10462284, -2.729248, 9.563812)

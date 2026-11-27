@@ -15,7 +15,6 @@ sky_material = SubResource("ProceduralSkyMaterial_mhcf7")
 
 [sub_resource type="Environment" id="Environment_h2sbk"]
 background_mode = 1
-background_color = Color(0.7121294, 0.7121294, 0.71212935, 1)
 sky = SubResource("Sky_rkdiv")
 glow_enabled = true
 
